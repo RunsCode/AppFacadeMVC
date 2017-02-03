@@ -1,7 +1,7 @@
 package com.example.dev_wang.databindingdemo.Module.Login.ViewModel;
 
 
-import Runs.ViewModel;
+import com.example.puremvc_appfacade.Runs.ViewModel;
 
 /**
  * Created by dev_wang on 2017/1/24.

@@ -2,8 +2,8 @@ package com.example.dev_wang.databindingdemo.Module.AppFacade;
 
 import com.example.dev_wang.databindingdemo.Module.Home.RunsHomePageModule;
 import com.example.dev_wang.databindingdemo.Module.Login.RunsUserLoginModule;
+import com.example.puremvc_appfacade.Runs.core.Controller;
 
-import Runs.core.Controller;
 
 /**
  * Created by dev_wang on 2017/1/24.

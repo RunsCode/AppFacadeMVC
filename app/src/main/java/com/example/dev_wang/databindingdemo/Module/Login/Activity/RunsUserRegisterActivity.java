@@ -1,7 +1,6 @@
 package com.example.dev_wang.databindingdemo.Module.Login.Activity;
 
 
-import android.app.Activity;
 import android.databinding.DataBindingUtil;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
@@ -11,7 +10,7 @@ import com.example.dev_wang.databindingdemo.R;
 import com.example.dev_wang.databindingdemo.databinding.ActivityRegisterBinding;
 
 import com.example.dev_wang.databindingdemo.Module.AppFacade.Runs;
-import Runs.Facade;
+import com.example.puremvc_appfacade.Runs.Facade;
 
 /**
  * Created by dev_wang on 2017/1/24.

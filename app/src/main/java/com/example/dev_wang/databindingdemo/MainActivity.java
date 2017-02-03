@@ -12,8 +12,8 @@ import com.example.dev_wang.databindingdemo.databinding.ActivityMainBinding;
 import com.example.dev_wang.databindingdemo.Module.AppFacade.AppModuleController;
 import com.example.dev_wang.databindingdemo.Module.Login.Activity.RunsUserLoginActivity;
 
-import Runs.Facade;
 import com.example.dev_wang.databindingdemo.Module.AppFacade.Runs;
+import com.example.puremvc_appfacade.Runs.Facade;
 
 public class MainActivity extends AppCompatActivity {
     private ActivityMainBinding activityMainBinding = null;

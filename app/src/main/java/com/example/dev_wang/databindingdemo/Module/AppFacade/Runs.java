@@ -1,9 +1,8 @@
 package com.example.dev_wang.databindingdemo.Module.AppFacade;
 
-import android.util.Log;
 
-import Runs.Facade;
-import Runs.protocol.IFacade;
+import com.example.puremvc_appfacade.Runs.Facade;
+import com.example.puremvc_appfacade.Runs.protocol.IFacade;
 
 /**
  * Created by dev_wang on 2017/1/24.

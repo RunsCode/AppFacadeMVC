@@ -3,8 +3,8 @@ package com.example.dev_wang.databindingdemo.Module.Login;
 import com.example.dev_wang.databindingdemo.Module.Login.ViewModel.RunsUserLoginViewModel;
 import com.example.dev_wang.databindingdemo.Module.Login.Meditaor.RunsUserLoginMediator;
 import com.example.dev_wang.databindingdemo.Module.Login.Meditaor.RunsUserRegisterMediator;
+import com.example.puremvc_appfacade.Runs.Module;
 
-import Runs.Module;
 
 /**
  * Created by dev_wang on 2017/1/24.

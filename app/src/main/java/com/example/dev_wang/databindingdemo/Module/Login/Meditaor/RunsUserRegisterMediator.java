@@ -7,9 +7,9 @@ import android.widget.Toast;
 
 import com.example.dev_wang.databindingdemo.MainActivity;
 import com.example.dev_wang.databindingdemo.Module.AppFacade.Runs;
+import com.example.puremvc_appfacade.Runs.Mediator;
+import com.example.puremvc_appfacade.Runs.protocol.INotification;
 
-import Runs.Mediator;
-import Runs.protocol.INotification;
 
 /**
  * Created by dev_wang on 2017/1/24.
