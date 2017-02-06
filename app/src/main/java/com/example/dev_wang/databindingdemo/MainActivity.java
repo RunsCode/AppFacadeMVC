@@ -52,11 +52,6 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        RunsLog.v("吧吧吧吧吧吧吧");
-        RunsLog.d("吧吧吧吧吧吧吧");
-        RunsLog.i("吧吧吧吧吧吧吧");
-        RunsLog.w("吧吧吧吧吧吧吧");
-        RunsLog.e("吧吧吧吧吧吧吧");
 //        String className = RunsUserLoginViewModel.class.getName();
 //        IViewModel viewModel = Runs.FACADE.getViewModelWithName(className);
 //        String viewModelName = viewModel.getViewModelName();
