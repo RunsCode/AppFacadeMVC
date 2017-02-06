@@ -201,7 +201,7 @@ IViewModel viewModel = Runs.FACADE.getViewModelWithName(className);
     }
 ```
 ###Download
-You can download a jar from GitHub's [releases page](https://github.com/RunsCode/AppFacadeMVC/releases).
+You can download a jar from GitHub's [releases page](https://github.com/RunsCode/AppFacadeMVC/releases).   
 Gradle:
 ```ruby
 	allprojects {
