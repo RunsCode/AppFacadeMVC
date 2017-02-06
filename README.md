@@ -240,4 +240,4 @@ If you believe you have identified a security vulnerability with PureMVC_AppFaca
 
 ## License
 
-AFNetworking is released under the MIT license. See LICENSE for details.
+PureMVC_AppFacade_Android is released under the MIT license. See LICENSE for details.
