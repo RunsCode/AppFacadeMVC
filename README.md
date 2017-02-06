@@ -201,3 +201,10 @@ IViewModel viewModel = Runs.FACADE.getViewModelWithName(className);
     }
 
 ```
+### Security Disclosure
+
+If you believe you have identified a security vulnerability with PureMVC_AppFacade_Android, you should report it as soon as possible via email to dev_wang@foxmail.com. Please do not post it to a public issue tracker.
+
+## License
+
+AFNetworking is released under the MIT license. See LICENSE for details.
