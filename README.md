@@ -13,7 +13,7 @@
 
 #### <a name="AppModuleController">AppModuleController：</a>
 ######初始化和创建 <font color="#4590a3" size = "3px">AppModuleController</font>， 它继承自 <font color="#4590a3" size = "3px">Controller</font>
-```
+```java
 public class AppModuleController extends Controller {
     @Override
     public void registerAllModules() {
@@ -32,7 +32,7 @@ public class AppModuleController extends Controller {
     }
 }
 ```
-```
+```java
 public class MainActivity extends AppCompatActivity {
     private ActivityMainBinding activityMainBinding = null;
     public MainActivity() {
@@ -54,7 +54,7 @@ public class MainActivity extends AppCompatActivity {
 #####<font color="#4590a3" size = "4px">第三步 创建对应的功能模块，比如登录、主页等</font>
 #### <a name="RunsUserLoginModule">RunsUserLoginModule</a>
 ######初始化和创建 <font color="#4590a3" size = "3px">RunsUserLoginModule</font>, 它继承自 <font color="#4590a3" size = "3px">Module</font>, 注册该模块需要的<font color="#4590a3" size = "3px">Mediator,ViewModel</font>, 以及移除解注册.
-```
+```java
 public class RunsUserLoginModule extends Module {
 
     @Override
