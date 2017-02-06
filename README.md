@@ -199,8 +199,41 @@ IViewModel viewModel = Runs.FACADE.getViewModelWithName(className);
             }
         });
     }
-
 ```
+###Download
+You can download a jar from GitHub's [releases page](https://github.com/RunsCode/AppFacadeMVC/releases).
+Gradle:
+```ruby
+	allprojects {
+		repositories {
+			...
+			maven { url 'https://jitpack.io' }
+		}
+	}
+```
+```ruby
+	dependencies {
+	        compile 'com.github.RunsCode:AppFacadeMVC:v1.0.0'
+	}
+```
+Maven:
+```xml
+	<repositories>
+		<repository>
+		    <id>jitpack.io</id>
+		    <url>https://jitpack.io</url>
+		</repository>
+	</repositories>
+```
+```xml
+	<dependency>
+	    <groupId>com.github.RunsCode</groupId>
+	    <artifactId>AppFacadeMVC</artifactId>
+	    <version>v1.0.0</version>
+	</dependency>
+```
+
+
 ### Security Disclosure
 
 If you believe you have identified a security vulnerability with PureMVC_AppFacade_Android, you should report it as soon as possible via email to dev_wang@foxmail.com. Please do not post it to a public issue tracker.
