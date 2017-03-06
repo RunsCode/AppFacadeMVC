@@ -1,6 +1,6 @@
 # PureMVC_AppFacade_Android
 
-#####<font color="#272727" size = "3px">这是库是一个轻量级MVC为Android软件从头开始架构的，特点是轻、解耦、模块化，业务分离，简单实用</font>
+#####<font color="#272727" size = "3px">这库是一个轻量级MVC为Android软件从头开始架构的，特点是轻、解耦、模块化，业务分离，简单实用</font>
 
 #####<font color="#4590a3" size = "3px">This library is a lightweight MVC architecture for Android software from the ground up, featuring light, decoupling, modular, business separation, simple and practical.</font>
 

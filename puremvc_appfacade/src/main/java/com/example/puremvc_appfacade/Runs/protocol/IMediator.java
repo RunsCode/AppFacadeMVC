@@ -5,7 +5,7 @@ package com.example.puremvc_appfacade.Runs.protocol;
  */
 
 public interface IMediator {
-    static final String Method_Name = "handleNotification";
+    String Method_Name = "handleNotification";
 
     void onRegister();
     void onRemove();

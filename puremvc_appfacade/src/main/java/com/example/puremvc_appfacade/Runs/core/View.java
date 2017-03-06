@@ -38,33 +38,6 @@ public class View implements IView{
     }
 
     @Override
-    public void registerObserver(IObserver observer, String notificationName) {
-        ArrayList<IObserver> observers = iObserverMap.get(notificationName);
-        if (null == observers || observers.size() <= 0) {
-            observers = new ArrayList<>();
-            iObserverMap.put(notificationName, observers);
-        }
-        observers.add(observer);
-    }
-
-    @Override
-    public void removeObserver(Object context, String notificationName) {
-        ArrayList<IObserver> observers = iObserverMap.get(notificationName);
-        if (null == observers || observers.size() <= 0) {
-            return;
-        }
-        for (IObserver observer : observers) {
-            if (observer.comparedNotifyContext(context)){
-                observers.remove(observer);
-                break;
-            }
-        }
-        if (observers.size() == 0) {
-            iObserverMap.remove(notificationName);
-        }
-    }
-
-    @Override
     public void registerMediator(String key, Class cls) {
         if (null == key || cls == null) {
             Log.e(TAG, "Register mediator with " + key +" failed" + " class: " + cls);
@@ -124,6 +97,34 @@ public class View implements IView{
             this.removeObserver(mediator, notificationName);
         }
         mediator.onRemove();
+    }
+
+
+    @Override
+    public void registerObserver(IObserver observer, String notificationName) {
+        ArrayList<IObserver> observers = iObserverMap.get(notificationName);
+        if (null == observers || observers.size() <= 0) {
+            observers = new ArrayList<>();
+            iObserverMap.put(notificationName, observers);
+        }
+        observers.add(observer);
+    }
+
+    @Override
+    public void removeObserver(Object context, String notificationName) {
+        ArrayList<IObserver> observers = iObserverMap.get(notificationName);
+        if (null == observers || observers.size() <= 0) {
+            return;
+        }
+        for (IObserver observer : observers) {
+            if (observer.comparedNotifyContext(context)){
+                observers.remove(observer);
+                break;
+            }
+        }
+        if (observers.size() == 0) {
+            iObserverMap.remove(notificationName);
+        }
     }
 
     @Override
