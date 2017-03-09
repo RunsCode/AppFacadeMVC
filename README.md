@@ -351,7 +351,7 @@ Gradle:
 ```
 ```ruby
 	dependencies {
-	        compile 'com.github.RunsCode:AppFacadeMVC:v1.0.0'
+	        compile 'com.github.RunsCode:AppFacadeMVC:v1.0.1'
 	}
 ```
 Maven:
@@ -367,7 +367,7 @@ Maven:
 	<dependency>
 	    <groupId>com.github.RunsCode</groupId>
 	    <artifactId>AppFacadeMVC</artifactId>
-	    <version>v1.0.0</version>
+	    <version>v1.0.1</version>
 	</dependency>
 ```
 
