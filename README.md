@@ -148,16 +148,13 @@ public class RunsUserLoginMediator extends Mediator {
             RunsUserLoginViewModel viewModel = (RunsUserLoginViewModel)Facade.INSTANCE.getViewModelWithName(className);
 
             final  MainActivity activity = (MainActivity)notification.getObject();
-            Log.i(TAG,Runs.USER_LOGIN_NOTIFICATION + "， activity = " + activity);
-            final  Context context = (Context)activity;//activity.getApplicationContext();
-            Log.i(TAG,Runs.USER_LOGIN_NOTIFICATION + "， context = " + context);
 
             viewModel.requestHttpInfo("我要请求用户信息", new RequestCallback<RunsUserInfo>() {
                 @Override
                 public void success(RunsUserInfo response) {
                     Log.i(TAG,"requestHttpInfo success， context = " + activity);
                     Toast.makeText(activity, Runs.USER_LOGIN_NOTIFICATION, Toast.LENGTH_SHORT).show();
-                    pushLoginActivity(activity,response);
+                    pushLoginActivity(activity, response);
                 }
 
                 @Override
@@ -183,7 +180,7 @@ public class RunsUserLoginMediator extends Mediator {
             return;
         }
 
-        //接触绑定注入的activity
+        //解除绑定注入的activity
         if (notificationName.equals(Runs.UNBUNDLED_VIEW_COMPONENT)) {
             Context context = (Context)this.getViewComponent();
             Toast.makeText(context, Runs.BIND_VIEW_COMPONENT, Toast.LENGTH_SHORT).show();
