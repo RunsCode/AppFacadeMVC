@@ -11,6 +11,7 @@ import com.example.dev_wang.databindingdemo.R;
 import com.example.dev_wang.databindingdemo.databinding.ActivityLoginBinding;
 
 import com.example.dev_wang.databindingdemo.Module.AppFacade.Runs;
+import com.example.puremvc_appfacade.Runs.Facade;
 
 /**
  * Created by dev_wang on 2017/1/24.
@@ -25,12 +26,15 @@ public class RunsUserLoginActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_login);
 
-        activityLoginBinding = DataBindingUtil.setContentView(this, R.layout.activity_login);
+        //给对应mediator 注入 activity
+        Facade.INSTANCE.sendNotification(Runs.BIND_VIEW_COMPONENT, this);
 
+
+        activityLoginBinding = DataBindingUtil.setContentView(this, R.layout.activity_login);
         activityLoginBinding.register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Runs.FACADE.sendNotification(Runs.USER_REGISTER_NOTIFICATION);
+                Facade.INSTANCE.sendNotification(Runs.USER_REGISTER_NOTIFICATION);
             }
         });
 
@@ -64,6 +68,8 @@ public class RunsUserLoginActivity extends AppCompatActivity {
     @Override
     protected void onDestroy() {
         super.onDestroy();
+        //activity  销毁的时候接触绑定释放对象 引用计数减一
+        Facade.INSTANCE.sendNotification(Runs.UNBUNDLED_VIEW_COMPONENT);
     }
 
     @Override

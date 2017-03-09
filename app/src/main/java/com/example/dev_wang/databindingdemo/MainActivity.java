@@ -20,54 +20,45 @@ public class MainActivity extends AppCompatActivity {
 
     public MainActivity() {
         super();
-        Facade.getInstance().init(new AppModuleController());
+        Facade.INSTANCE.init(new AppModuleController());
     }
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         activityMainBinding = DataBindingUtil.setContentView(this, R.layout.activity_main);
-        Runs.FACADE.sendNotification(Runs.BIND_VIEW_COMPONENT, this);
 
+        final MainActivity that = this;
         activityMainBinding.login.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Runs.FACADE.sendNotification(Runs.USER_LOGIN_NOTIFICATION);
-                Intent intent = new Intent(MainActivity.this, RunsUserLoginActivity.class);
-                startActivity(intent);
+                Facade.INSTANCE.sendNotification(Runs.USER_LOGIN_NOTIFICATION,that);
+                //上面一句代码等同于下面两行
+//                Intent intent = new Intent(MainActivity.this, RunsUserLoginActivity.class);
+//                startActivity(intent);
             }
         });
-
         activityMainBinding.register.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Runs.FACADE.sendNotification(Runs.USER_REGISTER_NOTIFICATION);
+                Facade.INSTANCE.sendNotification(Runs.USER_REGISTER_NOTIFICATION);
             }
         });
 
         activityMainBinding.logout.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Runs.FACADE.sendNotification(Runs.USER_LOGOUT_NOTIFICATION);
+                Facade.INSTANCE.sendNotification(Runs.USER_LOGOUT_NOTIFICATION);
             }
         });
 
-//        String className = RunsUserLoginViewModel.class.getName();
-//        IViewModel viewModel = Runs.FACADE.getViewModelWithName(className);
-//        String viewModelName = viewModel.getViewModelName();
-//        Log.i("viewModelName", viewModelName);
-
-//        String className = RunsUserLoginMediator.class.getName();
-//        RunsUserLoginMediator mediator = (RunsUserLoginMediator)Runs.FACADE.getMediatorWithName(className);
-//        mediator.setViewComponent(this);
-
     }
+
+
 
     @Override
     protected void onDestroy() {
         super.onDestroy();
-        Facade.getInstance().unRegisterAllModules();
-
-
+        Facade.INSTANCE.unRegisterAllModules();
     }
 }

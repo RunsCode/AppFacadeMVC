@@ -18,16 +18,11 @@ import com.example.puremvc_appfacade.Runs.protocol.IViewModel;
  * Created by dev_wang on 2017/1/23.
  */
 
-public class Facade implements IFacade {
-    protected String TAG = this.getClass().getName();
+public enum Facade implements IFacade {
+    INSTANCE;
     private IView iView = new View();
     private IModel iModel = new Model();
     private IController iController = null;
-
-    private static IFacade facade = new Facade();
-    public static IFacade getInstance() {
-        return facade;
-    }
 
     @Override
     public void init(IController controller) {

@@ -14,7 +14,6 @@ public class Module implements IModule {
     protected String TAG = this.getClass().getName();
     private ArrayList<String> mediators = new ArrayList<>();
     private ArrayList<String> viewModels = new ArrayList<>();
-    private IFacade facade = null;
     private String name = null;
 
     @Override
@@ -33,7 +32,7 @@ public class Module implements IModule {
             return;
         }
         mediators.add(mediatorName);
-        this.facade.registerMediatorWithName(mediatorName, iMediatorClass);
+        Facade.INSTANCE.registerMediatorWithName(mediatorName, iMediatorClass);
 
     }
     public void registerViewModelClass(Class iViewModelClass) {
@@ -42,19 +41,19 @@ public class Module implements IModule {
             return;
         }
         viewModels.add(viewModelName);
-        this.facade.registerViewModelWithName(viewModelName, iViewModelClass);
+        Facade.INSTANCE.registerViewModelWithName(viewModelName, iViewModelClass);
     }
 
     public void removeAllMediator(){
         for (String name : mediators) {
-            this.facade.removeMediatorWithName(name);
+            Facade.INSTANCE.removeMediatorWithName(name);
         }
         mediators.clear();
 
     }
     public void removeAllViewModel(){
         for (String name : viewModels) {
-            this.facade.removeViewModelWithName(name);
+            Facade.INSTANCE.removeViewModelWithName(name);
         }
         viewModels.clear();
     }
@@ -70,7 +69,4 @@ public class Module implements IModule {
         return this.name;
     }
 
-    public Module() {
-        this.facade = Facade.getInstance();
-    }
 }

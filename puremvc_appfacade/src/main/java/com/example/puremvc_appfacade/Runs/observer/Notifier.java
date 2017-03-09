@@ -26,6 +26,6 @@ public class Notifier implements INotifier {
 
     @Override
     public void sendNotification(String name, Object body, String type) {
-        Facade.getInstance().sendNotification(name, body, type);
+        Facade.INSTANCE.sendNotification(name, body, type);
     }
 }

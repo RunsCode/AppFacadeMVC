@@ -24,7 +24,7 @@ public class RunsUserRegisterActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         this.activityRegisterBinding = DataBindingUtil.setContentView(this, R.layout.activity_register);
-        Facade.getInstance().sendNotification(Runs.BIND_REGISTER_COMPONENT, this);
+        Facade.INSTANCE.sendNotification(Runs.BIND_REGISTER_COMPONENT, this);
         activityRegisterBinding.back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -35,7 +35,7 @@ public class RunsUserRegisterActivity extends AppCompatActivity {
         activityRegisterBinding.bingPhone.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Runs.FACADE.sendNotification(Runs.USER_BIND_PHONE_NOTIFICATION);
+                Facade.INSTANCE.sendNotification(Runs.USER_BIND_PHONE_NOTIFICATION);
             }
         });
 
@@ -43,7 +43,7 @@ public class RunsUserRegisterActivity extends AppCompatActivity {
         activityRegisterBinding.home.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Runs.FACADE.sendNotification(Runs.USER_REGISTER_DONE_NOTIFICATION);
+                Facade.INSTANCE.sendNotification(Runs.USER_REGISTER_DONE_NOTIFICATION);
             }
         });
     }
