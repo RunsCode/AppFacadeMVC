@@ -51,17 +51,17 @@ public class MainActivity extends AppCompatActivity {
 }
 ```
 
-#####<font color="#4590a3" size = "4px">第二步 创建模块文件夹目录（如图）</font>
+<font color="#4590a3" size = "4px">第二步 创建模块文件夹目录（如图）</font>
 
-######至于每个模块分别是什么职责一目了然
+至于每个模块分别是什么职责一目了然
 
 ![F04F6A3FB1343515D617810B1681E63F.jpg](./puremvc_appfacade/image/F04F6A3FB1343515D617810B1681E63F.jpg)
 
 ![QQ20170206-120213.png](./puremvc_appfacade/image/QQ20170206-120213.png)
 
-#####<font color="#4590a3" size = "4px">第三步 创建对应的功能模块，比如登录、主页等</font>
-#### <a name="RunsUserLoginModule">RunsUserLoginModule</a>
-######初始化和创建 <font color="#4590a3" size = "3px">RunsUserLoginModule</font>, 它继承自 <font color="#4590a3" size = "3px">Module</font>, 注册该模块需要的<font color="#4590a3" size = "3px">Mediator,ViewModel</font>, 以及移除解注册.
+<font color="#4590a3" size = "4px">第三步 创建对应的功能模块，比如登录、主页等</font>
+<a name="RunsUserLoginModule">RunsUserLoginModule</a>
+初始化和创建 <font color="#4590a3" size = "3px">RunsUserLoginModule</font>, 它继承自 <font color="#4590a3" size = "3px">Module</font>, 注册该模块需要的<font color="#4590a3" size = "3px">Mediator,ViewModel</font>, 以及移除解注册.
 ```java
 public class RunsUserLoginModule extends Module {
 
@@ -256,7 +256,7 @@ public class RunsUserLoginViewModel extends ViewModel {
 }
 
 ```
-####<font color="#000000" size = "6px">Usage：</font>
+<font color="#000000" size = "6px">Usage：</font>
  1.根据注册名(Java中反射获取Class字符串)获取对应 **Mediator**（不建议使用）
  ```java
 String className = RunsUserLoginMediator.class.getName();
@@ -368,10 +368,10 @@ Maven:
 ```
 
 
-### Security Disclosure
+ Security Disclosure
 
 If you believe you have identified a security vulnerability with PureMVC_AppFacade_Android, you should report it as soon as possible via email to dev_wang@foxmail.com. Please do not post it to a public issue tracker.
 
-## License
+ License
 
 PureMVC_AppFacade_Android is released under the MIT license. See LICENSE for details.
